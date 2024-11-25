@@ -1,10 +1,16 @@
-ㅁ = 0
-
+집가고싶다 = 0
+집안가고싶다 = -1
 def on_forever():
-    global ㅁ
-    basic.show_arrow(ㅁ)
+    global 집가고싶다
+    global 집안가고싶다
+    basic.show_arrow(집가고싶다)
     basic.clear_screen()
-    ㅁ += 1
-    if ㅁ == 7:
-        ㅁ = 0
+    basic.pause(500)
+    집가고싶다 += 1
+    if 집가고싶다 == 7:
+        집가고싶다 = 0
+    else:
+        집안가고싶다 -= 1
+        
+
 basic.forever(on_forever)
